@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff8f0;
+    color: #333;
+    line-height: 1.6;
+}
+header{
+    background-color: #c62828;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    
+}
+header h1{
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+header img{
+    width: 35%;
+    max-height: 300px;
+    object-position: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+nav a:hover{
+    background-color: #e9cfcf22;
+}
+main{
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px;
+}
+section{
+    margin-bottom: 50px;
+}
+#quemsomos{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#quemsomos img{
+    width: 280px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+#quemsomos p{
+    flex: 1;
+    text-align: justify;
+}
+#container-pizzas{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+.card-pizza:hover{
+    transform: translateY(-5px);
+}
+.card-pizza img{
+    width: 100%;
+    border-radius: 10%;
+    margin-bottom: 10px;
+}
+.card-pizza h2{
+    color: #c62828;
+    margin-bottom: 8px;
+}
+.card-pizza p{
+    font-size: 0.95rem;
+    color: #555;
+}
+#contato h2{
+    color: #c62828;
+    margin-bottom: 10px;
+}
+#contato ul{
+    list-style: none;
+    margin-top: 10px;
+}
+#contato li{
+    margin-bottom: 8px;
+}
+#contato a{
+    color: #c62828;
+    text-decoration: none;
+}
+#contato a:hover{
+    text-decoration: underline;
+}
+#sugestao h3{
+    color: #c62828;
+    margin-bottom: 15px;
+}
+form{
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+form div{
+    margin-bottom: 15px;
+}
+input, textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+button{
+    background-color: #c62828;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover{
+    background-color: #a61f1f;
+}
+/*Responsividade*/
+@media(max-width: 768px){
+    header h1{
+        font-size: 2rem;
+    }
+    #quemsomos{
+        flex-direction: column;
+        text-align: center;
+    }
+    #quemsomos img{
+        width: 100%;
+        max-width: 300px;
+    }
+}
