@@ -1,0 +1,57 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+.container{
+   background-image: linear-gradient(135deg,#3D0551, #6738E0);
+   display : flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+#card{
+    background-color: #1046c57e;
+    border-radius: 20px;
+    height: 805px;
+    width: 432px;
+    font-family: "KoHo", sans-serif;
+    color:#ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1{
+        font-weight: 400;
+        font-size: 2.5rem;
+        padding-bottom: 40px;
+        padding-top: 40px;
+    }
+}
+#fotoperfil{
+    height: 290px;
+    border-radius: 50%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 20px;
+    a{
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 2.5rem;
+        font-weight: 400;
+        
+    }
+    img{
+        height: 50px;
+        width: 50px;
+        padding-right: 8px;
+    }
+
+      
+}
