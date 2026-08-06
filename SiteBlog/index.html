@@ -3,51 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>TechBlog - Compartilhando Ideias</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <h1>Blog</h1>
-        <p>Criação de artigos</p>
+        <h1>TechBlog</h1>
+        <p>Seu espaço para criar e ler artigos</p>
     </header>
+
     <main class="layout-blog">
-        <aside class="sibebar-criacao">
+        <aside class="sidebar-criacao">
             <h2>Criar Novo Post</h2>
             <form id="form-novo-post">
                 <div class="campo">
                     <label for="titulo">Título do Artigo</label>
-                    <input type="text" id="titulo" required aria-placeholder="Ex: Aprendendo sobre Arrays">
+                    <input type="text" id="titulo" required placeholder="Ex: Aprendendo Arrays">
                 </div>
-
+                
                 <div class="campo">
                     <label for="autor">Seu Nome (Autor)</label>
-                    <input type="text" id="autor" required placeholder="Ex: André Costa">
+                    <input type="text" id="autor" required placeholder="Ex: Thaís Midlej">
                 </div>
+
                 <div class="campo">
                     <label for="categoria">Categoria</label>
                     <select id="categoria">
                         <option value="tecnologia">Tecnologia</option>
-                        <option value="estudos">Estudos</option>
+                        <option value="estudos">Estudos / Dicas</option>
                         <option value="carreira">Carreira</option>
                     </select>
                 </div>
+
                 <div class="campo">
                     <label for="conteudo">Conteúdo do Post</label>
-                    <textarea id="conteudo" rows="6" required placeholder="Escreva seu texto aqui..."></textarea>
+                    <textarea id="conteudo" rows="6" required placeholder="Escreva o seu texto aqui..."></textarea>
                 </div>
 
                 <button type="submit" id="btn-publicar">Publicar Post</button>
             </form>
         </aside>
+
         <section class="feed-posts">
             <h2>Artigos Recentes</h2>
-            <div id="containder-posts"></div>
+            <div id="container-posts">
+                </div>
         </section>
     </main>
+
     <footer>
-        Desenvolvido por <strong>Thaís Midlej Rocha</strong>.
+        Blog interativo desenvolvido para fins de estudo.
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
