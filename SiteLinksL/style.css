@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 /*header-----------------*/
 header{
@@ -76,7 +79,7 @@ main{
     display: flex;
     gap: 15px;
     padding: 50px;
-    height: 30vh;
+    height: 40vh;
     p{
         width: 50vw;
         text-align: justify;
@@ -89,6 +92,7 @@ main{
         background-image:url(assets/fotoreserva.png);
         background-size: cover;
         width: 50vw;
+        border-radius: 8px;
     }
 }
 /*Main --Section contato----------------*/
@@ -99,7 +103,7 @@ main{
     width: 100%;
     h3{
         text-align: center;
-        color: rgb(58, 66, 57);
+        color: rgba(46, 63, 44, 0.897);
         padding-top: 25px;
         padding-bottom: 25px;
     }
@@ -152,4 +156,85 @@ main{
 .social a:active {
   transform: translateY(0);
   box-shadow: none;
+}
+
+/*----footer---------------*/
+footer{
+    text-align: center;
+}
+
+
+/*----tela pequena---------------*/
+
+
+@media (max-width: 768px) {
+
+    /* Header e Navegação */
+    header {
+        display: none;
+    }
+
+    
+
+    /* Seção Home */
+    #home {
+        min-height: 50vh;
+        padding-bottom: 40px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #conteudo-home {
+        width: 100%;
+        text-align: center;
+    }
+
+    #conteudo-home #ft-rosto {
+        width: 200px;  /* Reduz o tamanho da foto no celular */
+        height: 200px;
+    }
+
+    /* Seção Sobre */
+    #sobre {
+        height: auto;  /* Permite crescer conforme o texto */
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    #sobre p {
+        width: 100%;   /* Ocupa a largura total no celular */
+        padding: 0;
+    }
+
+    #sobre #ft-sobre {
+        width: 100%;   /* Ocupa a largura total no celular */
+        height: 220px;
+        border-radius: 8px;
+    }
+
+    /* Seção Contato */
+    #contato {
+        height: auto;
+        padding: 30px 20px 50px;
+        h3{
+            color: rgba(184, 235, 178, 0.897);
+        }
+    }
+
+
+    .social {
+        flex-direction: column; /* Empilha os botões no celular */
+        width: 100%;
+    }
+
+    .social a {
+        width: 100%;           /* Botões com largura total */
+        justify-content: center;
+    }
+
+    /* Footer */
+    footer {
+        padding: 5px;
+        font-size: 0.85rem;
+    }
 }
