@@ -1,0 +1,28 @@
+body{
+  display:grid;
+  place-items: center;
+  min-block-size: 100dvb;
+  font-family: sans-serif;
+}
+#wrapper{
+  border: medium solid black;
+  padding: 1em;
+  inline-size: min(calc(100% / 2), 50vb);
+  container-type: inline-size;
+}
+p{
+  text-box: trim-both cap alphabetic;
+  text-fit: shrink;
+  font-size: calc(var(--cqi, 30) * 1cqi);
+  margin: unset;
+  padding-block: 2cqi;
+}
+[support]{
+  display: none;
+}
+@supports not (text-box: trim-both cap alphabetic){
+  [support="text-box"]{ display: block }
+}
+@supports not (text-fit: shrink){
+  [support="text-fit"]{ display: block }
+}

@@ -4,38 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Email Signature</title>
-     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols   +Outlined:opsz,wght,FILL,GRAD@20,400,0,0"
-    rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <main class="stage">
-        <section class="composer" aria-label="Email compose window">
-            <header class="composer__titlebar">
-                <span>New Message</span>
-                <div class="window-actions" area-hidden="true">
-                    <span class="material-symbols-outlined">remove</span>
-                    <span class="material-symbols-outlined">open_in_full</span>
-                    <span class="material-symbols-outlined">close</span>
-                </div>
-            </header>
+    <div>
+          <div support="text-box"><code>text-box</code> not supported in this browser</div>
+    <div support="text-fit"><code>text-fit</code> not supported in this browser</div>
+    </div>
 
-            <div class="composer__field">
-                <span>To</span>
-                <span class="composer__field-actions">Cc&nbsp; Bcc</span>
-            </div>
-            <div class="composer__field">Subject</div>
-            <div class="composer__bory" aria-hidden="true"></div>
-
-            <div class="Signature">
-
-            </div>
-        </section>
-
-    </main>
+    <div id="wrapper">
+      <p>CSS</p>
+      <p>is</p>
+      <p>awesome</p>
+    </div>
+    <input-control data-for="#wrapper" data-prop="--cqi">
+      <label for="cqi">font-size (cqi)</label>
+      <input id="cqi" type="range" min="1" max="100" value="50" />
+      <output for="cqi"></output>
+    </input-control>
 </body>
 </html>
