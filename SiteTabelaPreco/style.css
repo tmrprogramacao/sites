@@ -1,0 +1,212 @@
+/* ==========================================
+   RESET E VARIÁVEIS CSS
+   ========================================== */
+  :root {
+    --primary-color: #6366f1;       /* Roxo/Índigo */
+    --primary-hover: #4f46e5;
+    --bg-main: #f8fafc;
+    --card-bg: #ffffff;
+    --text-dark: #0f172a;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --radius: 16px;
+    --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 20px 30px -10px rgba(99, 102, 241, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+body {
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    line-height: 1.5;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+/* ==========================================
+   SEÇÃO & HEADER
+   ========================================== */
+.pricing-section {
+    width: 100%;
+    max-width: 1100px;
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.pricing-header h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.pricing-header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* ==========================================
+   GRID DE CARDS (LAYOUT PRINCIPAL)
+   ========================================== */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    align-items: center; /* Permite o destaque central se sobressair em altura */
+}
+
+/* ==========================================
+   CARD INDIVIDUAL
+   ========================================== */
+.pricing-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Card em Destaque ("Mais Popular") */
+.pricing-card.featured {
+    border: 2px solid var(--primary-color);
+    padding: 40px 24px; /* Mais alto que os outros */
+}
+
+.badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 16px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* Cabeçalho do Card */
+.card-header .plan-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.card-header .plan-description {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    min-height: 40px;
+}
+
+/* Preço */
+.plan-price {
+    margin: 24px 0;
+    display: flex;
+    align-items: baseline;
+}
+
+.plan-price .currency {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-right: 4px;
+}
+
+.plan-price .amount {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.plan-price .period {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-left: 4px;
+}
+
+/* Lista de Recursos */
+.plan-features {
+    list-style: none;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1; /* Garante alinhamento dos botões no rodapé */
+}
+
+.plan-features li {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+.plan-features li.disabled {
+    color: #cbd5e1;
+    text-decoration: line-through;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+/* ==========================================
+   RESPONSIVIDADE (MOBILE E TABLET)
+   ========================================== */
+@media (max-width: 900px) {
+    .pricing-grid {
+        grid-template-columns: 1fr; /* 1 coluna no celular e tablet */
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .pricing-card.featured {
+        padding: 32px 24px;
+        order: -1; /* Coloca o plano em destaque no topo no celular */
+    }
+}
