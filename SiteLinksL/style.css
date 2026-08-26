@@ -16,7 +16,7 @@ header{
     position: fixed;
     height: 60px;
     width: 100%;
-    background-color: rgb(187, 238, 181);
+    background-color: rgb(239, 252, 237);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,7 +46,7 @@ main{
 }
 #home{
     background-image: url(assets/pexels-anntarazevich-5620875.jpg);
-    height: 50vh;
+    height: 100vh;
     width: 100%;
     color: rgb(58, 66, 57);
     display: flex;
@@ -72,28 +72,30 @@ main{
         background-size: cover;
        
     }
+    .links-social{
+        padding-top: 35px;
+        padding-bottom: 25px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        img{
+            width: 35px;
+            height: 35px;
+        }
+    }
 }
 /*Main --Section sobre----------------*/
 #sobre{
-    background-color: rgb(187, 238, 181);
+    background-color: rgb(239, 252, 237);;
     display: flex;
     gap: 15px;
     padding: 50px;
-    height: 40vh;
-    p{
-        width: 50vw;
-        text-align: justify;
-        line-height: 1.5rem;
-        color: rgb(56, 71, 54);
-        padding: 15px;
+    
+}
+.texto{
+    background-color: #ffffff;
+    border-radius: 20px;
 
-    }
-    #ft-sobre{
-        background-image:url(assets/fotoreserva.png);
-        background-size: cover;
-        width: 50vw;
-        border-radius: 8px;
-    }
 }
 /*Main --Section contato----------------*/
 #contato{
