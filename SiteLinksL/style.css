@@ -92,10 +92,22 @@ main{
     padding: 50px;
     
 }
-.texto{
-    background-color: #ffffff;
-    border-radius: 20px;
 
+.texto{
+    background-color: #ebeae7c2;
+    border-radius: 20px;
+    
+    padding: 60px;
+    padding-top: 100px;
+    text-align: justify;
+    font-size: 1.9rem;
+    font-weight: 100;
+    line-height: 2.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+#sobre img{
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.363);
 }
 /*Main --Section contato----------------*/
 #contato{
@@ -203,16 +215,13 @@ footer{
         padding: 30px 20px;
     }
 
-    #sobre p {
+    .texto {
         width: 100%;   /* Ocupa a largura total no celular */
-        padding: 0;
+        padding: 20px;
+        font-size: 1rem;
+        line-height: 1.3rem;
     }
 
-    #sobre #ft-sobre {
-        width: 100%;   /* Ocupa a largura total no celular */
-        height: 220px;
-        border-radius: 8px;
-    }
 
     /* Seção Contato */
     #contato {
